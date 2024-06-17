@@ -12,7 +12,10 @@ body {
   color: #212121;
   line-height: 1.5;
 }
-.container {
+
+.gallery {
+  list-style: none;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -20,9 +23,7 @@ body {
   width: 1128px;
   height: 300px;
 }
-
-.gallery {
-  list-style: none;
-  padding: 0;
-  
+img{
+  width: 360px;
+  height: 300px;
 }
