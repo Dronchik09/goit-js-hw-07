@@ -5,6 +5,7 @@ function getRandomHexColor() {
 }
 const elements = document.querySelectorAll('#controls button');
 const boxeElement = document.querySelector('#boxes');
+const docFragment = document.createDocumentFragment();
 const reader = document.querySelector('#controls input');
 let boxSize = 20; 
 reader.addEventListener('input', handleRead);
@@ -25,9 +26,10 @@ function handleClick(event) {
       boxSize += 10;
       div.style.width = `${boxSize}px`;
       div.style.height = `${boxSize}px`;
-      boxeElement.append(div);
+      docFragment.appendChild(div);
       
     }
+    boxeElement.appendChild(docFragment);
   }
   reader.value = '';
 }

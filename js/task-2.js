@@ -26,12 +26,16 @@ const images = [
 ];
 const gallery = document.querySelector('.gallery');
 
-images.forEach((image) => {
+const elements =images.map(image => {
   const listItem = document.createElement('li');
+  listItem.classList.add('list');
   const img = document.createElement('img');
   img.src = image.url;
   img.alt = image.alt;
+  img.width = 360;
+  img.height = 300;
   listItem.append(img);
-  gallery.append(listItem);
+  return listItem;
 }
 );
+gallery.append(...elements);
